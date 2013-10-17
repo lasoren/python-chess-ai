@@ -117,7 +117,7 @@ class App:
 									if color == 'White' and len(self.missingPiecesWhite) > 0:
 										self.board.grid[self.finPos[0]][self.finPos[1]] = max(self.missingPiecesWhite)
 										self.missingPiecesWhite.remove(max(self.missingPiecesWhite))
-									elif len(self.missingPiecesBlack) > 0:
+									elif color == "Black" and len(self.missingPiecesBlack) > 0:
 										self.board.grid[self.finPos[0]][self.finPos[1]] = max(self.missingPiecesBlack)
 										self.missingPiecesBlack.remove(max(self.missingPiecesBlack))
 								# -----------------------------------------------------------
@@ -143,7 +143,7 @@ class App:
 									if color == 'Black' and len(self.missingPiecesBlack) > 0:
 										self.board.grid[choice[2][0]][choice[2][1]] = max(self.missingPiecesBlack)
 										self.missingPiecesBlack.remove(max(self.missingPiecesBlack))
-									elif len(self.missingPiecesWhite) > 0:
+									elif color == "White" and len(self.missingPiecesWhite) > 0:
 										self.board.grid[choice[2][0]][choice[2][1]] = max(self.missingPiecesWhite)
 										self.missingPiecesWhite.remove(max(self.missingPiecesWhite))
 								# -----------------------------------------------------------
